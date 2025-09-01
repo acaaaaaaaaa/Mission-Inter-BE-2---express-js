@@ -25,8 +25,6 @@ class MovieController {
   async getMovieById(req, res) {
     try {
       const { id } = req.params;
-      
-      // Validate ID parameter
       if (isNaN(id) || parseInt(id) <= 0) {
         return res.status(400).json({
           status: false,
@@ -82,8 +80,6 @@ class MovieController {
     try {
       const { id } = req.params;
       const updateData = req.validatedBody;
-      
-      // Validate ID parameter
       if (isNaN(id) || parseInt(id) <= 0) {
         return res.status(400).json({
           status: false,
@@ -118,8 +114,6 @@ class MovieController {
   async deleteMovie(req, res) {
     try {
       const { id } = req.params;
-      
-      // Validate ID parameter
       if (isNaN(id) || parseInt(id) <= 0) {
         return res.status(400).json({
           status: false,
